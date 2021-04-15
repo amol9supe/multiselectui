@@ -99,8 +99,6 @@ export class MultiselectuiComponent implements OnInit {
 
 		        return res.value.toLowerCase().match(filter.toLowerCase());
 		    });
-
-		    return this.options;
 		}
 		
 		}
