@@ -1,0 +1,39 @@
+<div class="container">
+	<!-- All selected options from checkbox show here -->
+	<div class="rowSelectedOptions">
+		<span *ngFor="let item of checkCountriesArr" class="selectedOptionsHtml">
+			{{ item }}
+		</span>
+	</div>
+
+	<div class="rowFilterOperations">
+
+	<!-- input box here for to search countries results -->
+	<div *ngIf="filter" class="rowFilterInput"> 
+		<input type="text" name="searchCountry" placeholder="search country" (input)="searchCountry($event)" (click)="searchCountry($event)">
+	</div>
+
+	<!-- This button used for when click then show countries results -->
+	<div class="rowFilterButton">
+		<div class="{{ arrowDown }}" (click)="onClickArrowDown($event)" [ngClass]="{'arrowUp': arrowDownstatus}"></div>
+	</div>
+
+	</div>
+	
+	<!-- All countries result show by default here -->
+	<div *ngIf="this.arrowDownstatus == true" class="rowListHtml">
+		
+		<div>
+			<div *ngFor="let item of options" class="hover">
+				<label for="options{{item.label}}">
+					<input id="options{{item.label}}" type="checkbox" [value]="item.label" [checked]="item.isChecked" (change)="onChange($event)"> 
+					{{ item.label }}
+				</label>
+			</div>
+			<div *ngIf="!this.options.length || this.options.length === 0">
+				No record Found
+			</div>
+		</div>
+
+	</div>
+</div>	

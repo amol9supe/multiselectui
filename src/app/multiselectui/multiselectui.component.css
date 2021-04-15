@@ -1,0 +1,67 @@
+.arrowDown {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;;
+}
+.arrowUp {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;;
+}
+.selectedOptionsHtml{
+	background-color: #c2c2c2;
+	color: #ffffff;
+	padding: 10px;
+	margin-left: 10px;
+}
+.rowSelectedOptions{
+	margin-bottom: 20px;
+}
+.rowFilterOperations{
+	width: 100%;
+}
+.rowFilterInput{
+	float: left;
+    padding: 10px 20px 10px 20px;
+    width: 75%;
+}
+.rowFilterInput input{
+	padding: 10px;
+	font-size: 16px;
+	width: 100%;
+}
+.rowFilterButton{
+	float: left;
+    padding: 12px 20px 12px 20px;
+    background-color: #c2c2c2;
+    color: #fff;
+    margin-top: 10px;
+}
+.rowListHtml{
+	clear: both;
+    float: left;
+    width: auto;
+    border: 1px solid #c2c2c2;
+    padding: 15px;
+    height: 200px;
+    overflow-y: scroll;
+    width: 75%;
+    position: relative;
+    top: -9px;
+    left: 20px;
+}
+.rowListHtml .hover{
+	padding: 10px;
+	font-size: 16px;
+}
+.rowListHtml .hover:hover{
+	background-color: #f6f6f6;
+}
